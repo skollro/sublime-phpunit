@@ -89,7 +89,7 @@ class RunPhpunitTestCommand(PhpunitTestCommand):
     def run(self, *args, **kwargs):
         file_name, phpunit_config_path, phpunit_bin, active_view, directory = self.get_paths()
 
-        self.run_in_terminal('cd ' + phpunit_config_path + self.get_cmd_connector() + phpunit_bin + ' ' + file_name)
+        self.run_in_terminal('cd ' + phpunit_config_path + self.get_cmd_connector() + phpunit_bin + ' ' + file_name + ' --exclude-group none')
 
 class RunAllPhpunitTestsCommand(PhpunitTestCommand):
 
